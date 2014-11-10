@@ -1,0 +1,30 @@
+{
+	"name": "brisk-parser",
+	"version": "0.0.1",
+	"description": "Drop-in, multi-purpose parser",
+	"author": "makesites",
+	"contributors": [
+		{ "name": "Makis Tracend", "email": "makis@makesit.es" }
+	],
+	"homepage": "http://makesites.org/brisk#modules",
+	"keywords": ["parser", "node", "body", "busboy", "multipart", "form", "rest"],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/brisk-modules/parser.git"
+	},
+	"bugs": {
+		"url": "https://github.com/brisk-modules/parser/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT license",
+			"url": "http://makesites.org/licenses/MIT"
+		}
+	],
+	"engines": { "node": ">=0.8.x" },
+	"main": "index",
+	"dependencies": {
+		"brisk": "0.x",
+		"fb": "0.6.x"
+	}
+}

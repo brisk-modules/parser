@@ -1,6 +1,6 @@
 # Brisk Parser
 
-Multi-purpose parser
+Drop-in, multi-purpose parser
 
 
 ## Dependencies

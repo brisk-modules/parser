@@ -1,5 +1,7 @@
 var Parent = require("brisk").getClass("main"),
-	bodyParser = require("body-parser");
+	bodyParser = require("body-parser"),
+	cookieParser = require('cookie-parser');
+
 
 helper = Parent.extend({
 
@@ -14,7 +16,10 @@ helper = Parent.extend({
 			// execute custom parser if set in the options
 			next();
 		}
-	}
+	},
+
+	cookieParser: cookieParser,
+
 	//
 
 	// Work around instead of using bodyParser

@@ -20,7 +20,8 @@ npm install brisk-parser
 
 The following boolean options allow you to enable/disable parsing types:
 
-* **body** (default: true),traditional body parser
+* **body** (default: true), traditional body parser
+* **cookies** (always true), basic cookie parser
 * **json** (default: false), supporting parsing of: ```application/json```
 * **files** (default: false), parsing uploaded files
 

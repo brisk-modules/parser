@@ -1,31 +1,44 @@
-var Parent = require("brisk").getClass("main"),
+var _ = require("underscore"),
 	bodyParser = require("body-parser"),
-	cookieParser = require('cookie-parser');
-
+	cookieParser = require('cookie-parser'),
+	Parent = require("brisk").getClass("main");
 
 helper = Parent.extend({
 
-	parser: function(){
+/*
+	init: function( site ){
+		// save context
+		this.parser = _.bind(this.parser, this);
 
-		console.log( this );
-		//app.use(bodyParser.urlencoded({ extended: false }))
+		if( Parent.prototype.init ) return Parent.prototype.init.call(this, site);
+	},
+*/
+
+	parser: function( options ){
+		// context is all wrong in this version...
+		var self = this,
+			//app = this.site.modules.app;
+			app = this.express;
+		if( options.body ){
+			app.use(bodyParser.urlencoded({ extended: false }));
+		}
 		// parse application/json
-		//app.use(bodyParser.json())
-
+		if( options.json ){
+			app.use(bodyParser.json());
+		}
 		return function(req, res, next) {
 			// execute custom parser if set in the options
+			//if( options.custom ) return self.custom();
 			next();
 		}
 	},
 
 	cookieParser: cookieParser,
-
 	//
 
 	// Work around instead of using bodyParser
 	// Source: http://stackoverflow.com/a/9920700/1247359
-	/*
-	parser : function(req, res, next) {
+	custom: function(req, res, next) {
 		var data='';
 		req.setEncoding('utf8');
 		req.on('data', function(chunk) {
@@ -52,7 +65,7 @@ helper = Parent.extend({
 			next();
 		});
 	},
-	*/
+
 
 });
 

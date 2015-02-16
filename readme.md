@@ -16,6 +16,15 @@ Using npm
 npm install brisk-parser
 ```
 
+## Options
+
+The following boolean options allow you to enable/disable parsing types:
+
+* **body** (default: true),traditional body parser
+* **json** (default: false), supporting parsing of: ```application/json```
+* **files** (default: false), parsing uploaded files
+
+
 ## Credits
 
 Innitiated by [Makis Tracend](http://github.com/tracend)

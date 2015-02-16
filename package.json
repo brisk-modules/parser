@@ -1,6 +1,6 @@
 {
 	"name": "brisk-parser",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Drop-in, multi-purpose parser for Brisk",
 	"author": "makesites",
 	"contributors": [
